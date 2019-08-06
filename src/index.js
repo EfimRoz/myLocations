@@ -1,5 +1,5 @@
 import React from "react";
-import FormContainer from "./js/components/container";
+import FormContainer from "./js/components/group";
 import ReactDOM from "react-dom";
 import index from "./js/index";
 

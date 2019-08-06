@@ -2,6 +2,7 @@ import React, { Component } from "react";
 import { connect } from "react-redux";
 import uuidv1 from "uuid";
 import { addLocation } from "../actions/index";
+import Input from "./presentational"
 
 const mapDispatchToProps = dispatch => {
     return {
@@ -40,34 +41,38 @@ class ConnectedForm extends Component {
         return (
             <form onSubmit={this.handleSubmit}>
                 <div className="form-group">
-                    <label htmlFor="name">Name</label>
-                    <input
+                    {/* <label htmlFor="name">Name</label> */}
+                    <Input
                         type="text"
+                        label="Name"
                         className="form-control"
                         id="name"
                         value={name}
                         onChange={this.handleChange}
                     />
-                    <label htmlFor="address">Address</label>
-                    <input
+                    {/* <label htmlFor="address">Address</label> */}
+                    <Input
                         type="text"
+                        label="Address"
                         className="form-control"
                         id="address"
                         value={address}
                         onChange={this.handleChange}
                     />
-                    <label htmlFor="coordinates">Coordinates</label>
-                    <input
+                    {/* <label htmlFor="coordinates">Coordinates</label> */}
+                    <Input
                         type="text"
+                        label="Coordinates"
                         className="form-control"
                         id="coordinates"
                         value={coordinates}
                         onChange={this.handleChange}
                     />
                     
-                    <label htmlFor="category">Category</label>
-                    <input
+                    {/* <label htmlFor="category">Category</label> */}
+                    <Input
                         type="text"
+                        label="Category"
                         className="form-control"
                         id="category"
                         value={category}

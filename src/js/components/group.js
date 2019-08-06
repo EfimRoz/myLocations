@@ -14,12 +14,11 @@ class FormContainer extends Component {
         this.setState({ [event.target.id]: event.target.value });
     }
     render() {
-        const { seo_title } = this.state;
+        const { seo_title } = this.state; // !IMPORTANT
         return (
             <form id="article-form">
                 <Input
-                    text="SEO title"
-                    label="seo_title"
+                    label="SEO title"
                     type="text"
                     id="seo_title"
                     value={seo_title}
