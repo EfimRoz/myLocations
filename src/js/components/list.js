@@ -1,15 +1,19 @@
 import React from "react";
 import { connect } from "react-redux";
+
 const mapStateToProps = state => {
-    return { articles: state.articles };
+    // console.log('passing those locations:', state)
+    return state.locations; // !IMPORTANT
 };
-const ConnectedList = ({ articles }) => (
+
+const ConnectedList = ({ locations }) => (
     <ul>
-        {articles.map(el => (
+        {
+             locations.map(el => (
             <li key={el.id}>
-                {el.name}
+                {el.title}
             </li>
-        ))}
+        )) }
     </ul>
 );
 const List = connect(mapStateToProps)(ConnectedList);

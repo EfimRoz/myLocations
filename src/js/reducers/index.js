@@ -1,14 +1,5 @@
-import {ADD_ARTICLE} from "../constants/action-types";
+import locationReducer from "./locations";
+import {combineReducers} from 'redux';
 
-const initialState = {
-    articles: []
-};
-const rootReducer = (state = initialState, action) =>{
-    switch (action.type) {
-        case ADD_ARTICLE:
-            return { ...state, articles: [...state.articles, action.payload] };
-        default:
-            return state;
-    }
-};
+const rootReducer = combineReducers({ locations:locationReducer });
 export default rootReducer;

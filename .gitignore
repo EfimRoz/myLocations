@@ -8,6 +8,10 @@
 
 # production
 /build
+/dist
+
+#IDE
+/.idea
 
 # misc
 .DS_Store
