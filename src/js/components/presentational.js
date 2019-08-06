@@ -5,18 +5,18 @@ import store from "../store/index";
 
 
 
-const Input = ({ label, text, type, id, value, handleChange }) => (
-    <div className="form-group">
-        <label htmlFor={id}>{label}</label>
-        <input
-            type={type}
-            className="form-control"
-            id={id}
-            value={value}
-            onChange={handleChange}
-            required
-        />
-    </div>
+const Input = ({ label, type, id, value, onChange, className }) => (
+        <div>
+            <label htmlFor={id}>{label}</label>
+            <input
+                type={type}
+                className={className}
+                id={id}
+                value={value}
+                onChange={onChange}
+                required
+            />
+        </div>
 );
 
 export default Input;

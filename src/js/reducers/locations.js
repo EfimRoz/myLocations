@@ -6,7 +6,6 @@ const initialState = {
 const locationReducer = (state = initialState, action) =>{
     switch (action.type) {
         case ADD_LOCATION:
-            console.log('adding location', { ...state, locations: [...state.locations, action.payload] });
             return { ...state, locations: [...state.locations, action.payload] };
         default:
             return state;

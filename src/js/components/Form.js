@@ -1,14 +1,15 @@
 import React, { Component } from "react";
 import { connect } from "react-redux";
 import uuidv1 from "uuid";
-import { addLocation } from "../actions/index";
+import { addLocation } from "../actions";
 import Input from "./presentational"
 
 const mapDispatchToProps = dispatch => {
     return {
-        addLocation: article => dispatch(addLocation(article))
+        addLocation: location => dispatch(addLocation(location))
     };
 };
+
 const cleanState = {
     name: "", 
     address: "",
@@ -28,7 +29,7 @@ class ConnectedForm extends Component {
     }
 
     handleSubmit(event) {
-        console.log('Submited', event);
+        // console.log('Submited', event);
         event.preventDefault();
         const { name, address, coordinates, category } = this.state; // destructuring assignment
         const id = uuidv1();
