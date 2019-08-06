@@ -8,13 +8,16 @@ const mapDispatchToProps = dispatch => {
         addLocation: article => dispatch(addLocation(article))
     };
 };
+const cleanState = {
+    name: "", 
+    address: "",
+    coordinates: "", 
+    category: ""
+}
 class ConnectedForm extends Component {
-
     constructor() {
         super();
-        this.state = {
-            name: ""
-        };
+        this.state = {...cleanState};
         this.handleChange = this.handleChange.bind(this);
         this.handleSubmit = this.handleSubmit.bind(this);
     }
@@ -26,10 +29,10 @@ class ConnectedForm extends Component {
     handleSubmit(event) {
         console.log('Submited', event);
         event.preventDefault();
-        const { name } = this.state; // destructuring assignment
+        const { name, address, coordinates, category } = this.state; // destructuring assignment
         const id = uuidv1();
-        this.props.addLocation({ name, id });
-        this.setState({ name: "" });
+        this.props.addLocation({ id, name, address, coordinates, category });
+        this.setState({...cleanState});
     }
 
     render() {
@@ -45,7 +48,6 @@ class ConnectedForm extends Component {
                         value={name}
                         onChange={this.handleChange}
                     />
-                    {/* Name, Address, Coordinates, and Category. */}
                     <label htmlFor="address">Address</label>
                     <input
                         type="text"

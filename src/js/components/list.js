@@ -11,7 +11,8 @@ const ConnectedList = ({ locations }) => (
         {
              locations.map(el => (
             <li key={el.id}>
-                {el.title}
+            {/* Name, Address, Coordinates, and Category. */}
+               Name - {el.name}, Address - {el.address}, Coordinates - {el.coordinates}, Category - {el.category}
             </li>
         )) }
     </ul>
