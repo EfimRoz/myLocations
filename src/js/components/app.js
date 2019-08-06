@@ -1,5 +1,7 @@
 import React from "react";
-import List from "./location/LocationsList";
+import LocationsList from "./location/List";
+import CategoriesList from "./category/List";
+
 import Form from "./location/Form";
 import Category from "./category/Category"
 const App = () => (
@@ -9,8 +11,12 @@ const App = () => (
             <Category />
         </div>
         <div>
+            <h2>Categories</h2>
+            <CategoriesList />
+        </div>
+        <div>
             <h2>Locations</h2>
-            <List />
+            <LocationsList />
         </div>
         <div>
             <h2>Add a new Location</h2>
