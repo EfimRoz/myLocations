@@ -1,12 +1,12 @@
 import React, { Component } from "react";
 import { connect } from "react-redux";
-import Input from "./presentational";
+import Input from "../presentational";
 import uuidv1 from "uuid";
-import { addGroup } from "../actions"
+import { addCategory } from "../../actions"
 
 const mapDispatchToProps = dispatch => {
     return {
-        addGroup: group => dispatch(addGroup(group))
+        addCategory: category => dispatch(addCategory(category))
     };
 };
 
@@ -26,7 +26,7 @@ class FormContainer extends Component {
         event.preventDefault();
         const { name } = this.state; // destructuring assignment
         const id = uuidv1();
-        this.props.addGroup({ id, name });
+        this.props.addCategory({ id, name });
         this.setState({name: ""});
     }
     render() {

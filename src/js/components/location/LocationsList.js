@@ -6,7 +6,7 @@ const mapStateToProps = state => {
     return state.locations; // !IMPORTANT
 };
 
-const ConnectedList = ({ locations }) => (
+const LocationsList = ({ locations }) => (
     <ul>
         {
              locations.map(el => (
@@ -17,5 +17,5 @@ const ConnectedList = ({ locations }) => (
         )) }
     </ul>
 );
-const List = connect(mapStateToProps)(ConnectedList);
+const List = connect(mapStateToProps)(LocationsList);
 export default List;
