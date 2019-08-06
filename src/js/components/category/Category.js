@@ -13,9 +13,7 @@ const mapDispatchToProps = dispatch => {
 class FormContainer extends Component {
     constructor() {
         super();
-        this.state = {
-            name: ""
-        };
+        this.state = { name: "" };
         this.handleChange = this.handleChange.bind(this);
         this.handleSubmit = this.handleSubmit.bind(this);
     }
