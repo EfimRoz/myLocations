@@ -1,12 +1,12 @@
 import React from "react";
-import LocationsList from "./location/List";
-import CategoriesList from "./category/List";
+// import LocationsList from "./location/List";
+// import CategoriesList from "./category/List";
 
-import Form from "./location/Form";
-import Category from "./category/Category"
-const App = () => (
+// import Form from "./location/Form";
+// import Category from "./category/Category"
+const Home = () => (
     <div>
-        <div>
+        {/* <div>
             <h2>Categories</h2>
             <Category />
         </div>
@@ -21,7 +21,8 @@ const App = () => (
         <div>
             <h2>Add a new Location</h2>
             <Form />
-        </div>
+        </div> */}
+        hi
     </div>
 );
-export default App;
+export default Home;

@@ -10,7 +10,7 @@ const mapDispatchToProps = dispatch => {
     };
 };
 
-class FormContainer extends Component {
+class FormContainer extends Component { // !IMPORTANT wtf is formContainer?!
     constructor() {
         super();
         this.state = { name: "" };
@@ -28,7 +28,7 @@ class FormContainer extends Component {
         this.setState({name: ""});
     }
     render() {
-        const { name } = this.state; // !IMPORTANT
+        const { name } = this.state; 
         return (
             <form onSubmit={this.handleSubmit}>
                 <div className="form-group">

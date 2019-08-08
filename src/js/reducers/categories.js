@@ -1,5 +1,4 @@
 import { ADD_CATEGORY } from "../constants/action-types";
-import { CATEGORIES } from "../constants/localStorage-names";
 
 
 const initialState = {
@@ -10,8 +9,7 @@ const categoryReducer = (state = initialState, action) =>{
     switch (action.type) {
         case ADD_CATEGORY:
             const categories = [...state.categories, action.payload];
-            localStorage.setItem(CATEGORIES, JSON.stringify(categories));
-            return { ...state, categories: categories };
+            return { ...state, categories };
         default:
             return state;
     }

@@ -1,2 +1,6 @@
 export const ADD_LOCATION = "ADD_LOCATION";
 export const ADD_CATEGORY = "ADD_CATEGORY";
+
+export const CRUDBAR_CREATE = "CRUDBAR_CREATE";
+export const CRUDBAR_UPDATE = "CRUDBAR_UPDATE";
+export const CRUDBAR_DELETE = "CRUDBAR_DELETE";
